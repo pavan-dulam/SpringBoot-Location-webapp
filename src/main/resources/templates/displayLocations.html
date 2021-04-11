@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ALL LOCATIONS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+   
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../public/static/css/style.css" th:href="@{css/style.css}">
+</head>
+
+<body>
+<section>
+
+<h1>Locations</h1>
+<div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>CODE</th>
+                <th>NAME</th>
+                <th>TYPE</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+            <tr th:each="location : ${locations}">
+                <td th:text="${location.id}"></td>
+                <td th:text="${location.code}"></td>
+                <td th:text="${location.name}"></td>
+                <td th:text="${location.type}"></td>
+                <td><a th:href="@{/deleteLocation(id=${location.id})}">Delete </a>
+                    <!--<a th:href="@{/editLocation(id=${location.id})}">&nbsp;Edit</a>-->
+                </td>
+            
+            </tr>
+        </tbody>
+    </table>
+</div>
+</section>
+    
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+    <footer class="text-center text-white" id="footer">
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/pavan.dulam/"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+    
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/dulam_pavan"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+    
+    
+    
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/pd_6026/"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+    
+                <!-- Linkedin -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.linkedin.com/in/pavan-dulam"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                <!-- Github -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/pavan6026" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="made-with-loves text-center  p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Made with
+            <i style="color: #F50057">♥</i> by Pavan Dulam
+        </div>
+    </footer>
+    <!-- follow me template -->
+
+
+<script>
+    $(window).on("load resize ", function () {
+            var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+            $('.tbl-header').css({ 'padding-right': scrollWidth });
+        }).resize();
+</script>
+
+</body>
+
+</html>

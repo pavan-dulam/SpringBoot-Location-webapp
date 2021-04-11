@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../public/static/css/style.css" th:href="@{css/style.css}">
+    <title>Create Location</title>
+</head>
+
+<body>
+    <form class="form" action="saveloc" method="post" >
+        <pre>
+            <div class="col-md-4 col-md-offset-4" style="margin: 0 auto;">
+ID:<input class="mb-2" type="text" name="id"/>
+CODE:<input class="mb-2" type="text" name="code"/>
+NAME:<input class="mb-2" type="text" name="name"/>
+TYPE:Urban<input class="mb-2" type="radio" name="type" value="URBAN"/>
+	 Rural<input class="mb-4" type="radio" name="type" value="RURAL"/>
+	 <input class="btn btn-dark  " type="submit" value="save" style=" height:40px; width:140px;"  />
+    
+	
+    <span th:text="${succesMsg}"></span>
+    
+    <a href="displayLocations" class=" btn btn-dark "style="height:40px; width:140px;">View All</a><br>
+    <a href="report" class=" btn btn-dark " style="height:40px; width:140px;">Report</a>
+    </div>
+    </pre>
+    </form>
+
+    
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+    <footer class="text-center text-white" id="footer">
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/pavan.dulam/"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+    
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/dulam_pavan"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+    
+    
+    
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/pd_6026/"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+    
+                <!-- Linkedin -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.linkedin.com/in/pavan-dulam"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                <!-- Github -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/pavan6026" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="made-with-loves text-center  p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Made with
+            <i style="color: #F50057">♥</i> by Pavan Dulam
+        </div>
+    </footer>
+    <!-- follow me template -->
+</body>
+
+</html>
