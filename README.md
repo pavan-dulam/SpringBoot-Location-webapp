@@ -23,7 +23,7 @@
 
 ---
 
-##REPORT SCREEN:
+## REPORT SCREEN:
 
 ![REPORT SCREEN](https://github.com/pavan6026/SpringBoot-Location-webapp/blob/main/pictures/viewReport.PNG "REPORT SCREEN")
 
